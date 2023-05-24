@@ -1,0 +1,123 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="game" class="game"></div>
+<div id="next" class="next"></div>
+<div id="button">
+    <ul>
+        <li><button  class="fal">fall</button></li>
+        <li><button  class="top">top</button></li>
+        <li><button  id="chong">again</button></li>
+    </ul>
+    <ul>
+        <li><button  class="left">left</button></li>
+        <li><button  class="down">down</button></li>
+        <li><button  class="right">right</button></li>
+    </ul>
+</div>
+<div class="info">
+    <div>Time<span id="time">0s</span></div>
+    <div>score<span id="score">0</span></div>
+</div>
+
+<script src="suqar.js"></script>
+<script src="all squar.js"></script>
+<script src="game.js"></script>
+<script src="Local.js"></script>
+<script>
+    var local=new Local();
+    document.getElementById("chong").onclick=function (){
+        local.start();
+    }
+    local.start();
+</script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <title>
+ </title>
+ <style>
+  /* 设置整个页面为一个grid容器 */
+  body {
+   display: grid;
+   /* 设置grid的行和列的大小 */
+   grid-template-rows: 1fr 3fr;
+   grid-template-columns: 1fr 3fr;
+   /* 设置grid的区域名称 */
+   grid-template-areas: 
+    "game next"
+    "button info";
+  }
+
+  /* 设置game和next这两个div为grid子元素，并指定它们的区域名称 */
+  #game {
+   grid-area: game;
+   background-color: lightblue;
+  }
+
+  #next {
+   grid-area: next;
+   background-color: lightgreen;
+  }
+
+  /* 设置button这个div为grid子元素，并指定它的区域名称 */
+  #button {
+   grid-area: button;
+   background-color: lightpink;
+  }
+
+  /* 设置info这个div为grid子元素，并指定它的区域名称 */
+  .info {
+   grid-area: info;
+   background-color: lightyellow;
+   /* 设置info这个div内部的两个子元素为grid容器，并指定它们的列大小 */
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+  }
+ </style>
+</head>
+<body>
+<div id="game" class="game"></div>
+<div id="next" class="next"></div>
+<div id="button">
+ <ul>
+ <li><button class="fal">fall</button></li>
+ <li><button class="top">top</button></li>
+ <li><button id="chong">again</button></li>
+ </ul>
+ <ul>
+ <li><button class="left">left</button></li>
+ <li><button class="down">down</button></li>
+ <li><button class="right">right</button></li>
+ </ul>
+</div>
+<div class="info">
+ <div>Time<span id="time">0s</span></div>
+ <div>score<span id="score">0</span></div>
+</div>
+
+<script src="suqar.js"></script>
+<script src="all squar.js"></script>
+<script src="game.js"></script>
+<script src="Local.js"></script>
+<script>
+ var local=new Local();
+ document.getElementById("chong").onclick=function (){
+ local.start();
+ }
+ local.start();
+</script>
+</body>
+</html>
